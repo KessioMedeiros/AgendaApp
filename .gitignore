@@ -1,0 +1,61 @@
+## .NET
+# Diretórios de build
+bin/
+obj/
+
+# Diretório de pacotes do NuGet
+.nuget/
+
+# Arquivos gerados pelo ASP.NET Core
+wwwroot/
+
+# Diretórios do Visual Studio
+.vs/
+.vscode/
+
+# Arquivos do Rider
+.idea/
+
+# Arquivos de configuração do JetBrains Rider
+.idea/
+
+# Arquivos de log
+*.log
+
+# Arquivos de configuração locais
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
+
+# Arquivos de banco de dados locais
+*.mdf
+*.ldf
+
+# Arquivos de compilação do Roslyn
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# Arquivos de configuração do build (como arquivos de publicação)
+publish/
+
+# Arquivos temporários do sistema operacional
+Thumbs.db
+Desktop.ini
+
+# Arquivos do macOS
+.DS_Store
+
+# Arquivos do Linux
+*~
+
+# Arquivos temporários do Visual Studio Code
+.vscode/
+
+# Arquivos gerados por ferramentas de CI/CD
+# Exemplo de pasta de build para Azure DevOps
+._build/
+
+# Exclui pacotes NuGet baixados globalmente
+.nuget/packages/

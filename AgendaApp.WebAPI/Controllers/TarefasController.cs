@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AgendaApp.WebAPI.Dtos;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgendaApp.WebAPI.Controllers
@@ -8,7 +9,7 @@ namespace AgendaApp.WebAPI.Controllers
     public class TarefasController : ControllerBase
     {
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult Post(TarefaRequestDto request)
         {
             return Ok("Cadastro de tarefa");
         }

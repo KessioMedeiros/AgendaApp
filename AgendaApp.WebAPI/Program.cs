@@ -14,6 +14,16 @@ builder.Services.AddAutoMapper(typeof(ProfileMap));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Configuração para que o projeto Angular possa fazer requisições para a API
+builder.Services.AddCors(
+    config => config.AddPolicy("DefaultPolicy", builder =>
+    {
+        builder.WithOrigins("http://localhost:4200")
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+    })
+);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,6 +34,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+
+app.UseCors("DefaultPolicy");
 
 app.MapControllers();
 
